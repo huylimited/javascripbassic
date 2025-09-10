@@ -1,0 +1,88 @@
+.body{
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color:#43A047;
+    margin: 0px;
+   
+    
+    
+}
+.content{
+width: 50%;
+height: 100vh;
+background-color: #43A047;
+color: hsl(0, 100%, 100%);
+padding: 20px;
+}
+h1{
+    
+    font-size: 40px;
+    font-weight: bold;
+}
+a{
+ color: hsl(0, 100%, 100%);
+ text-decoration: none;
+ font-weight: bold;
+}
+li a{
+    text-decoration:solid underline;
+}
+.nhap{
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+}
+.area-nhap{
+    width: 100%;
+    height: 20vh;
+    margin-top: 20px;
+    border-radius: 10px;
+   background-color: rgb(234, 245, 237);
+    
+}
+button{
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: hsl(0, 73%, 64%);
+    color: hsl(0, 100%, 100%);
+    border: none;
+    position:absolute;
+  bottom: 25px;
+
+    left:370px;
+ 
+}
+
+.area{
+    width: 50%;
+    height: 100%;
+
+    background-color: rgba(31, 43, 114, 0.836);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.img-1{
+    width: 105px;
+    height: 105px;
+    background-image: url(/viewport/assets/img/frog-green.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.img-2{
+    width: 105px;
+    height: 105px;
+    background-image: url(/viewport/assets/img/lilypad-green.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
