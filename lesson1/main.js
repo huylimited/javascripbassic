@@ -1,24 +1,109 @@
-//9. lam viec voi mang
-var Hocsinh=[
-    {
-        id:1,
-        name:'huy',
-        coin:0
-    },
-     {
-        id:2,
-        name:'anh',
-        coin:0
-    },
-     {
-        id:3,
-        name:'dang',
-        coin:3
-    }
-];
+//14. de quy
+function giaithuat(number){
+if(number >0){
+    return number* giaithuat(number -1);
+
+}
+return 1;
+}
+console.log(giaithuat(6));
+//13.filter x2
+
+//  var course=[
+//     {name:'huy',
+//      age:22
+//     },
+//     { name:'anh',
+//         age:21
+//     },
+//     {
+//         name:'dang',
+//         age:23
+//     }
+
+//  ]
+//  var exage= course.filter(function(people,index,array){
+//     return people.age>21; })
+
+//      console.log(exage);
+
+//12. foreach x2
+// var course=[
+//     'javascrip',
+//     'ruby',
+//     'c++',
+//     'python'
+// ]
+
+// course.forEach(function(cs,index,array){
+//     console.log(cs,index,array);
+// })
+//11.callback
+// function goi1(param){
+//     param('hoc lap trinh');
+// }
+
+// function goi2(value){
+//     console.log('value :',value);
+// }
+// goi1(goi2);
+
+// var course=[
+//     'javascrip',
+//     'ruby',
+//     'c++',
+//     'python'
+
+// ]
+//  var htmls= course.map(function(cs){
+//     return `<h2>${cs}</h2>`
+//  })
+// console.log(htmls.join(', '))
+
+//10.math object      
+//  //10.1 Math.PI
+//   console.log(Math.PI);
+//   //10.2 Math.round()
+//    console.log(Math.round(3.231));
+//   //10.3 Math.abs()
+//   console.log(Math.abs(-45.5));
+//   //10.4 Math.ceil()
+//   console.log(Math.ceil(4.11));
+//   //10.5 Math.floor()
+//   console.log(Math.floor(4.9));
+//   //Math.random()
+//   console.log(Math.floor(Math.random()*6));
+// // Math.max();
+// console.log(Math.max(-100,45,67));
+// //Math.min();
+// console.log(Math.min(-100,45,67));
+
+  
 
 
 
+
+// //9. lam viec voi mang
+// var Hocsinh=[
+//     {
+//         id:1,
+//         name:'huy',
+//         coin:40
+//     },
+//      {
+//         id:2,
+//         name:'anh',
+//         coin:0
+//     },
+//      {
+//         id:3,
+//         name:'dang',
+//         coin:35
+//     }
+// ];
+
+
+//-----------------------------------------------------------------------------
 //9.1 foreach
 
 // Hocsinh.forEach(function(hs,index){
@@ -33,14 +118,48 @@ var Hocsinh=[
 // });
 // console.log(isfree);
 //9.3 some 
-var isfree=Hocsinh.some(function(hs,index){
-    console.log(index);
-    return hs.coin===0;
-});
-console.log(isfree)
+// var isfree=Hocsinh.some(function(hs,index){
+//     console.log(index);
+//     return hs.coin===0;
+// });
+// console.log(isfree)
+//9.4find
+//var course= Hocsinh.find(function(course,index){
+//     console.log(index);
+//     return course.name==='huy';
+//  })
+//  console.log(course.name);
+//9.5 filter
+// var course= Hocsinh.filter(function(student,index){
+//     console.log(index);
+//     return student.coin===0;
+// }) ;
+// console.log(course);
+//9.6 map
+// var course=Hocsinh.map(function(student,index){
+// return student.coin*2;
+
+// })
+// console.log(course);
+//9.7 reduce
+// var toltal= Hocsinh.reduce(function(sum,student){
+//     return sum +student.coin;
+// },0);
+// console.log(toltal);
+
+// var listnumber=[1,[2,3],4,[5,6,7],8];
+// var gopnumber=listnumber.reduce(function(numberlist,numberitem){
+//     return numberlist.concat(numberitem);
+// },[]);
+//   console.log(gopnumber);
+//9.8 includes
+// var ten='phamf quoc huy';
+// console.log(ten.includes('pham'));
 
 
-//8. vong lap long nhau
+
+//------------------------------------------------------------------------------
+//.8. vong lap long nhau
 // var number=[
 //     [1,2],
 //     [3,4],
