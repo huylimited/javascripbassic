@@ -1,13 +1,135 @@
-//14. de quy
-function giaithuat(number){
-if(number >0){
-    return number* giaithuat(number -1);
+
+//16 eventlistenner
+var geta= document.querySelector('h1');
+
+function viec1(){
+    console.log('viec 1');
 
 }
-return 1;
+function viec2(){
+    console.log('viec 2');
+    
 }
-console.log(giaithuat(6));
-//13.filter x2
+geta.addEventListener('click',viec1);
+ setTimeout(function(){
+geta.addEventListener('click',viec2);
+    
+ },3000);
+
+
+
+
+
+//15 stopropagation
+//  var geta= document.querySelector('h1');
+//  geta.onclick= function(e){
+//     console.log('a');
+//    e.stopPropagation();
+
+
+//  }
+
+//14 prevent defaut
+// var geta= document.links;
+// for(var i=0;i<geta.length;i++){
+//     geta[i].onclick=function(e){
+//         if(!e.target.href.startsWith('https://google.com')){
+//             e.preventDefault();
+//         }
+//     }
+// }
+
+//13.8 dom event
+// var getText= document.querySelector('h1');
+// getText.onclick =function(){
+//     getText.classList.add('red');
+// }
+
+
+// var getText= document.querySelectorAll('h1');
+
+// for(var i=0;i<getText.length;i++){
+//     getText[i].onclick=function(e){
+// e.target.classList.add('red');
+
+//     }
+// }
+
+
+// var examEvent= document.querySelector('input[type="checkbox"]');
+// examEvent.onchange= function(){
+//     console.log(examEvent.checked);
+// }
+
+
+// var examEvent= document.querySelector('input[type="text"]');
+// examEvent.onkeydown= function(e){
+//     console.log(e.target.value);
+// }
+
+//13.7 class list
+// var headingelement = document.querySelector('.huy');
+
+// headingelement.classList.add('red');
+// console.log(headingelement.classList.length);
+// console.log(headingelement.classList.contains('red'));
+// console.log(headingelement.classList.value);
+// headingelement.classList.remove('red');
+// console.log(headingelement.classList.contains('red'));
+
+
+// //13.6 dome style
+// var headingelement = document.querySelector('.huy');
+// headingelement.style.width='100px';
+
+//13.5 inner & text content & innerhtml & outerhtml
+// var headingelement = document.querySelector('.huy');
+// console.log(headingelement.outerHTML)
+
+// var headingelement = document.querySelector('.huy');
+// headingelement.innerHTML= '<h1>new conntent</h1>';
+
+// var headingelement = document.querySelector('.huy');
+// headingelement.textContent= 'new conntent';
+
+//13.4 dom atribute
+// var  headingelement=document.querySelector('h1');
+// console.log(headingelement.setAttribute('class','huy2'));
+// console.log(headingelement.getAttribute('class'));
+
+//getelement tu dom
+// var boxnote= document.querySelector('.box-1');
+
+// console.log(boxnote.getElementsByTagName('li'));
+
+
+//13.3 get tag name
+
+// console.log(document);
+// var getname= document.getElementsByTagName('h1');
+// console.log(getname);
+
+//-------------------------------------------------
+// 13.2 get class
+// console.log(document);
+// var getname= document.getElementsByClassName('huy');
+// console.log(getname);
+//--------------------------------------------------
+// 13.1 getid
+// console.log(document);
+// var getname= document.getElementById('huy');
+// console.log(getname);
+//--------------------------------------------------
+// 14. de quy
+// function giaithuat(number){
+// if(number >0){
+//     return number* giaithuat(number -1);
+
+// }
+// return 1;
+// }
+// console.log(giaithuat(6));
+// 13.filter x2
 
 //  var course=[
 //     {name:'huy',
@@ -15,7 +137,7 @@ console.log(giaithuat(6));
 //     },
 //     { name:'anh',
 //         age:21
-//     },
+//     }, 
 //     {
 //         name:'dang',
 //         age:23
@@ -27,7 +149,7 @@ console.log(giaithuat(6));
 
 //      console.log(exage);
 
-//12. foreach x2
+// 12. foreach x2
 // var course=[
 //     'javascrip',
 //     'ruby',
@@ -38,7 +160,7 @@ console.log(giaithuat(6));
 // course.forEach(function(cs,index,array){
 //     console.log(cs,index,array);
 // })
-//11.callback
+// 11.callback
 // function goi1(param){
 //     param('hoc lap trinh');
 // }
@@ -60,7 +182,7 @@ console.log(giaithuat(6));
 //  })
 // console.log(htmls.join(', '))
 
-//10.math object      
+// 10.math object      
 //  //10.1 Math.PI
 //   console.log(Math.PI);
 //   //10.2 Math.round()
@@ -103,45 +225,45 @@ console.log(giaithuat(6));
 // ];
 
 
-//-----------------------------------------------------------------------------
-//9.1 foreach
+// -----------------------------------------------------------------------------
+// 9.1 foreach
 
 // Hocsinh.forEach(function(hs,index){
 //     console.log(index,hs);
 
 // });// callback
-//9.2 every-> nhu tim dieu kien true false
+// 9.2 every-> nhu tim dieu kien true false
 // var isfree=Hocsinh.every(function(hs,index){
 //     console.log(index);
 //     return hs.coin===0;
 
 // });
 // console.log(isfree);
-//9.3 some 
+// 9.3 some 
 // var isfree=Hocsinh.some(function(hs,index){
 //     console.log(index);
 //     return hs.coin===0;
 // });
 // console.log(isfree)
-//9.4find
-//var course= Hocsinh.find(function(course,index){
+// 9.4find
+// var course= Hocsinh.find(function(course,index){
 //     console.log(index);
 //     return course.name==='huy';
 //  })
 //  console.log(course.name);
-//9.5 filter
+// 9.5 filter
 // var course= Hocsinh.filter(function(student,index){
 //     console.log(index);
 //     return student.coin===0;
 // }) ;
 // console.log(course);
-//9.6 map
+// 9.6 map
 // var course=Hocsinh.map(function(student,index){
 // return student.coin*2;
 
 // })
 // console.log(course);
-//9.7 reduce
+// 9.7 reduce
 // var toltal= Hocsinh.reduce(function(sum,student){
 //     return sum +student.coin;
 // },0);
@@ -152,14 +274,14 @@ console.log(giaithuat(6));
 //     return numberlist.concat(numberitem);
 // },[]);
 //   console.log(gopnumber);
-//9.8 includes
+// 9.8 includes
 // var ten='phamf quoc huy';
 // console.log(ten.includes('pham'));
 
 
 
-//------------------------------------------------------------------------------
-//.8. vong lap long nhau
+// ------------------------------------------------------------------------------
+// .8. vong lap long nhau
 // var number=[
 //     [1,2],
 //     [3,4],
@@ -174,8 +296,8 @@ console.log(giaithuat(6));
 
 
 
-//-------------------------------------------------------------------
-//7 break va continue
+// -------------------------------------------------------------------
+// 7 break va continue
 // for(var i=0;i<10;i++){
 // if(i%2 !==0){
 //     continue;
@@ -186,7 +308,7 @@ console.log(giaithuat(6));
 // }
 
 // -----------------------------------------------------------------
-//6. vong lap
+// 6. vong lap
 // 6.1   for
 // for(var i=1;i<10;i++){
 //   console.log(i);
@@ -203,7 +325,7 @@ console.log(giaithuat(6));
 // for(var i=0;i<chieudai;i++){
 //     console.log(arraylengh[i]);
 // }
-//6.2 for in
+// 6.2 for in
 // var myinfo={
 //     ten:'huy',
 //     ho:'pham',
@@ -218,7 +340,7 @@ console.log(giaithuat(6));
 // for(var key in myString){
 //     console.log(myString[key])
 // }
-//6.3 for of
+// 6.3 for of
 // var arraylengh=[
 //     'javascrip',
 //     'c++',
@@ -232,13 +354,13 @@ console.log(giaithuat(6));
 
 // }
 
-//6.4 while
+// 6.4 while
 // var i=0;
 // while(i<100){
 //     i++;
 //     console.log(i);
 // }
-//6.5 do while
+// 6.5 do while
 // var i=0;
 // isSucces=false;
 
@@ -250,8 +372,8 @@ console.log(giaithuat(6));
 //     }
     
 // }while(!isSucces && i<3);
-//--------------------------------------------------------------------------
-//5. toan tu 3 ngoi
+// --------------------------------------------------------------------------
+// 5. toan tu 3 ngoi
 // var course={
 //     name:'javascrip',
 //     coin:250
@@ -291,7 +413,7 @@ console.log(giaithuat(6));
 
 
 // -----------------------------------------------------------------
- //3. if else
+//  3. if else
 // var date=new Date().getDate();
 
 // if(date===10){
@@ -307,9 +429,9 @@ console.log(giaithuat(6));
 
 
 
-//-----------------------------------------------------------------
+// -----------------------------------------------------------------
 // 2.doi tuong date
-// 
+
 // var date=new Date();   // khoi tao doi tuong dang object
 // var year=date.getFullYear(); // lay nam
 // var month=date.getMonth()+1;// lay thang
