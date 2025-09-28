@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000; 
+     font-family: 'Roboto', Arial, sans-serif;
+}
+.sidebar{
+    margin-right: 20px;
+    padding:5px;
+    width: 40%;
+    height: 100vh;
+}
+.sb_item{
+    padding: 5px;
+    font-size: 12px;
+}
+.sb_header_logoyt{
+    display: inline-block;
+}

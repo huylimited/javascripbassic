@@ -1,26 +1,174 @@
+var person={
+name: 'huy',
+age:22,
+adress:{city:'hanoi'}
+};
 
-//16 eventlistenner
-var geta= document.querySelector('h1');
+console.log(person?.adress.city);
 
-function viec1(){
-    console.log('viec 1');
 
-}
-function viec2(){
-    console.log('viec 2');
+
+
+//spreach
+//  var ob1={
+//     name:'huy',
+//     price:2000
+//  }
+//  var ob2={
+//     adress:'ha tinh'
+//  }
+//  var ob3={...ob1,...ob2};
+//  console.log(ob3); 
+//23 destrucring- ...rest(lay phan con lai)
+// var course={
+//     name:'huy',
+//     age:22,
+//     price:1000
+// }
+// var {name,...rest}=course;
+// console.log(name);
+// console.log(rest);
+
+//22 default prameter values
+//   function printext(e='huy'){
+//     console.log('in ra '+e)
+
+// }
+
+// printext();
+//21 enhanced object literal
+// var name='huy';
+// var age=21;
+// var course={name,age,
+//     getname(){
+//         return name;
+//     }
     
-}
-geta.addEventListener('click',viec1);
- setTimeout(function(){
-geta.addEventListener('click',viec2);
+// };
+
+
+// const course2={
+//     [name]:'javascrip',
+//     [age]:21
+// }
+// console.log(course2);
+
+//20 classes
+//  class people{
+//     constructor(name,price){
+//         this.name=name;
+//         this.price=price;
+//     }
+//     getName(){
+//         return this.name;
+
+//     }
+//  }
+// //19 multistring \n
+// var name1='pham quoc\n huy';
+// console.log(name1)
+
+// //18. multistring voi template literal
+// var name1='huy';
+// var name2=`pham quoc ${name1}`;
+// console.log(name2)
+
+///17.2 promise chain
+// function sleep(ms){
+//     return new Promise(function(resolve){
+//         console.log('dang chay.....');
+//         setTimeout(resolve,ms);
+        
+//     });
+// }
+
+
+// sleep(5000)
+// .then(function(){
+//     console.log(1);
+//     return sleep(1000);
+// })
+// .then(function(){
+//     console.log(2);
+//     return sleep(1000);
+// })
+// .then(function(){
+//     console.log(3);
+//     return sleep(1000);
+// })
+
+
+
+
+//17 promise
+
+
+// promise= new Promise(
+//     function(resolve,reject)
+//     {
+// resolve();
+//     }
+// )
+// promise
+// .then(
+//     function(){
+// console.log("thanh cong")
+// }
+// )
+// .then(
+//     function(){
+// console.log("1")
+// }
+// )
+// .then(
+//     function(){
+// console.log("2")
+// }
+// )
+// .catch(
+// function(error){
+// console.log(error);
+// }
+// )
+// .finally(
+// function(){
+//     console.log('hoan thanh')
+
+// }
+// );
+//17 json
+//17.1 parse vs stringify
+
+// var json='["javascrip","php","c++"]';
+// var json2='{ "name":"huy","age":22,"dungsai":true  }';
+
+// var people=JSON.stringify(['huy','anh']);
+// console.log(people);
+
+// console.log(JSON.parse(people));
+
+// 16 eventlistenner
+// var geta= document.querySelector('h1');
+
+// function viec1(){
+//     console.log('viec 1');
+
+// }
+// function viec2(){
+//     console.log('viec 2');
     
- },3000);
+// }
+// geta.addEventListener('click',viec1);
+//  setTimeout(function(){
+// geta.addEventListener('click',viec2);
+    
+//  },3000);
 
 
 
 
 
-//15 stopropagation
+// 15 stopropagation
 //  var geta= document.querySelector('h1');
 //  geta.onclick= function(e){
 //     console.log('a');
@@ -29,7 +177,7 @@ geta.addEventListener('click',viec2);
 
 //  }
 
-//14 prevent defaut
+// 14 prevent defaut
 // var geta= document.links;
 // for(var i=0;i<geta.length;i++){
 //     geta[i].onclick=function(e){
@@ -39,7 +187,7 @@ geta.addEventListener('click',viec2);
 //     }
 // }
 
-//13.8 dom event
+// 13.8 dom event
 // var getText= document.querySelector('h1');
 // getText.onclick =function(){
 //     getText.classList.add('red');
@@ -67,7 +215,7 @@ geta.addEventListener('click',viec2);
 //     console.log(e.target.value);
 // }
 
-//13.7 class list
+// 13.7 class list
 // var headingelement = document.querySelector('.huy');
 
 // headingelement.classList.add('red');
@@ -82,7 +230,8 @@ geta.addEventListener('click',viec2);
 // var headingelement = document.querySelector('.huy');
 // headingelement.style.width='100px';
 
-//13.5 inner & text content & innerhtml & outerhtml
+
+// 13.5 inner & text content & innerhtml & outerhtml
 // var headingelement = document.querySelector('.huy');
 // console.log(headingelement.outerHTML)
 
@@ -92,34 +241,34 @@ geta.addEventListener('click',viec2);
 // var headingelement = document.querySelector('.huy');
 // headingelement.textContent= 'new conntent';
 
-//13.4 dom atribute
+// 13.4 dom atribute
 // var  headingelement=document.querySelector('h1');
 // console.log(headingelement.setAttribute('class','huy2'));
 // console.log(headingelement.getAttribute('class'));
 
-//getelement tu dom
+// getelement tu dom
 // var boxnote= document.querySelector('.box-1');
 
 // console.log(boxnote.getElementsByTagName('li'));
 
 
-//13.3 get tag name
+// 13.3 get tag name
 
 // console.log(document);
 // var getname= document.getElementsByTagName('h1');
 // console.log(getname);
 
-//-------------------------------------------------
+// -------------------------------------------------
 // 13.2 get class
 // console.log(document);
 // var getname= document.getElementsByClassName('huy');
 // console.log(getname);
-//--------------------------------------------------
+// --------------------------------------------------
 // 13.1 getid
 // console.log(document);
 // var getname= document.getElementById('huy');
 // console.log(getname);
-//--------------------------------------------------
+// --------------------------------------------------
 // 14. de quy
 // function giaithuat(number){
 // if(number >0){

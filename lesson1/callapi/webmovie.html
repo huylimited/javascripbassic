@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produce</title>
+</head>
+<body>
+    <h1> danh sách sản phẩm</h1>
+    <button  id="loadBtn"> Tải dữ liệu</button>
+    <div id="data"> </div>
+
+
+    <script>
+const apiUrl="https://dummyjson.com/products"
+function loadData(){
+    fetch(apiUrl)
+    .then(res=>res.json())
+    .then(data=>{
+        
+        const list= data.products;
+        const container=document.getElementById("data");
+        container.innerHTML="";
+         
+        list.forEach(item=>{
+            const div=document.createElement("div");
+            div.style.border="1px solid gray";
+            div.style.margin="10px";
+            div.style.padding="10px";
+
+            div.innerHTML=`
+            <h3> ${item.title}    </h3>
+            <img src="${item.thumbnail}" alt="${item.title}" width="100"/>
+            <p> Giá: ${item.price} $</p>
+
+            `;
+            container.appendChild(div);
+        }
+   
+        )
+
+    })
+    .catch(err => console.error("Lỗi:", err));
+
+}
+document.getElementById("loadBtn").addEventListener("click",loadData);
+    </script>
+
+
+</body>
+</html>
